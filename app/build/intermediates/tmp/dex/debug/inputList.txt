@@ -1,0 +1,6 @@
+/home/priyank/AndroidStudioProjects/OneTouch/app/build/intermediates/classes/debug
+/home/priyank/AndroidStudioProjects/OneTouch/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-fd98a0e3874337e30f4bbd79d03dc4bba05a57e2.jar
+/home/priyank/AndroidStudioProjects/OneTouch/app/build/intermediates/pre-dexed/debug/classes-ce5e921b8e2c24196e9a58c02009471b8eced09c.jar
+/home/priyank/AndroidStudioProjects/OneTouch/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-bdf2415ce6c915e38b9cb4d181eb3fd08c3b0468.jar
+/home/priyank/AndroidStudioProjects/OneTouch/app/build/intermediates/pre-dexed/debug/classes-9754c860e7a29175979ce14ae80f9b68fcb59907.jar
+/home/priyank/AndroidStudioProjects/OneTouch/app/build/intermediates/pre-dexed/debug/classes-0297db1b0374e0e2f74d7505818852f5f015eed2.jar

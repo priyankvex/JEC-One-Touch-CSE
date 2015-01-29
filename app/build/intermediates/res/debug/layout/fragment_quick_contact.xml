@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="170dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/contact" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image"
+        android:background="#77000000"
+        android:paddingBottom="14dip"
+        android:paddingLeft="8dip"
+        android:paddingTop="14dip"
+        android:text="Jec One Touch"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18sp"
+        android:id="@+id/header"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The aims to provide all the college notices, campus happenings and news right into your phone. Forget checking any page or group every few hours so that you don't miss anything. Just sit back and relax, we'll make sure you don't miss anything."
+        android:layout_below="@+id/image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15sp"
+        android:background="#deeff5"
+        android:paddingBottom="14dip"
+        android:paddingLeft="8dip"
+        android:paddingTop="14dip"
+        />
+
+
+</RelativeLayout><!-- From: file:/home/priyank/AndroidStudioProjects/OneTouch/app/src/main/res/layout/fragment_quick_contact.xml -->
