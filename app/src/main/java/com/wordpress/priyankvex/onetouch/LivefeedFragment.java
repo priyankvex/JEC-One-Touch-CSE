@@ -46,9 +46,9 @@ public class LivefeedFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_livefeed, container, false);
 
         TextView tv = (TextView)root.findViewById(R.id.text1);
-        Typeface face = Typeface.createFromAsset(getActivity().getAssets(),
+        typeface = Typeface.createFromAsset(getActivity().getAssets(),
                 "fonts/Ubuntu-L.ttf");
-        tv.setTypeface(face);
+        tv.setTypeface(typeface);
 
         return root;
     }

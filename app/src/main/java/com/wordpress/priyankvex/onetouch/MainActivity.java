@@ -17,6 +17,8 @@
 package com.wordpress.priyankvex.onetouch;
 
 import android.app.ActionBar;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -42,7 +44,6 @@ public class MainActivity extends FragmentActivity {
 	private ViewPager pager;
 	private MyPagerAdapter adapter;
 
-	private Drawable oldBackground = null;
 	private int currentColor = 0xFF3F9FE0;
 
 	@Override
@@ -63,6 +64,13 @@ public class MainActivity extends FragmentActivity {
 		tabs.setViewPager(pager);
 
         changeColor(currentColor);
+
+        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        if( prefs.getString("gcm_id", null) == null){
+            Intent i = new Intent(MainActivity.this, RegistrationActivity.class);
+            startActivity(i);
+            finish();
+        }
 	}
 
 	@Override

@@ -10,15 +10,14 @@
         android:layout_marginLeft="3dp"
         android:layout_marginBottom="3dp"
         android:layout_marginRight="3dp"
-        android:gravity="center"
         android:background="@drawable/background_card">
-        <TextView
-            android:layout_width="wrap_content"
+
+        <ListView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@android:id/text1"
-            android:text="Fragment Options"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp" />
+            android:id="@+id/options_list"
+            >
+        </ListView>
 
     </LinearLayout>
 </FrameLayout>

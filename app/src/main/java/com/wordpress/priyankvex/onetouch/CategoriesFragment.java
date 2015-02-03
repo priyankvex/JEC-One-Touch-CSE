@@ -3,6 +3,7 @@ package com.wordpress.priyankvex.onetouch;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,10 +36,16 @@ public class CategoriesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
         View root = inflater.inflate(R.layout.fragment_categories, container, false);
 
         return root;
+    }
+
+    //Helper function to get the screen width of the device in dp
+    private float getScreenWidth(){
+        DisplayMetrics displayMetrics = this.getResources().getDisplayMetrics();
+        float dpWidth = displayMetrics.widthPixels;
+        return dpWidth;
     }
 
 }
