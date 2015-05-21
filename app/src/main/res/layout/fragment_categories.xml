@@ -13,10 +13,76 @@
         android:layout_marginBottom="3dp"
         android:layout_marginRight="3dp"
         android:gravity="center"
-        android:background="@drawable/background_card"
         >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/textViewAcademics"
+                android:background="@drawable/card_dash_1"
+                android:text="Academics"
+                android:height="60dp"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"
+                android:textColor="#ffffff"
+                android:textSize="8pt"
+                />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/textViewNews"
+                android:background="@drawable/card_dash_2"
+                android:text="News"
+                android:height="60dp"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"
+                android:textColor="#ffffff"
+                android:textSize="8pt"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/textViewDownloads"
+                android:background="@drawable/card_dash_3"
+                android:text="Downloads"
+                android:height="60dp"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"
+                android:textColor="#ffffff"
+                android:textSize="8pt"
+                />
+            <TextView
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/textViewTpo"
+                android:background="@drawable/card_dash_4"
+                android:text="TPO"
+                android:height="60dp"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"
+                android:textSize="8pt"
+                />
+            <TextView
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/textViewOthers"
+                android:background="@drawable/card_dash_5"
+                android:text="Others"
+                android:height="60dp"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"
+                android:textSize="8pt"
+                />
+
+        </LinearLayout>
 
     </ScrollView>
 

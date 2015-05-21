@@ -16,11 +16,10 @@
 
 package com.wordpress.priyankvex.onetouch;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaScannerConnection;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,6 +34,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.astuetz.PagerSlidingTabStrip;
+
+import java.io.File;
+import java.util.ArrayList;
 
 public class MainActivity extends FragmentActivity {
 
@@ -51,6 +53,11 @@ public class MainActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+        getFromSdcard();
+        for (String path : f){
+            MediaScannerConnection.scanFile(this, new String[]{path}, new String[]{"image/png"}, null);
+        }
+
 		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 		pager = (ViewPager) findViewById(R.id.pager);
 		adapter = new MyPagerAdapter(getSupportFragmentManager());
@@ -66,9 +73,10 @@ public class MainActivity extends FragmentActivity {
         changeColor(currentColor);
 
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-        if( prefs.getString("gcm_id", null) == null){
+        if( prefs.getString("reg_id", null) == null){
             Intent i = new Intent(MainActivity.this, RegistrationActivity.class);
             startActivity(i);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             finish();
         }
 	}
@@ -79,7 +87,7 @@ public class MainActivity extends FragmentActivity {
 		return true;
 	}
 
-	@Override
+    @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 
 		switch (item.getItemId()) {
@@ -102,8 +110,6 @@ public class MainActivity extends FragmentActivity {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 
             Log.d("onetouch", "color should changed");
-            ActionBar bar = getActionBar();
-            bar.setBackgroundDrawable(new ColorDrawable(newColor));
 
 		}
 
@@ -178,5 +184,27 @@ public class MainActivity extends FragmentActivity {
 		}
 
 	}
+
+    ArrayList<String> f = null;// list of file paths
+    File[] listFile;
+    // Helper function to get all the file paths
+    public void getFromSdcard()
+    {
+        f = new ArrayList<>();
+        File file= new File(android.os.Environment.getExternalStorageDirectory(),"OneTouch");
+
+        if (file.isDirectory())
+        {
+            listFile = file.listFiles();
+
+
+            for (int i = 0; i < listFile.length; i++)
+            {
+
+                f.add(listFile[i].getAbsolutePath());
+
+            }
+        }
+    }
 
 }

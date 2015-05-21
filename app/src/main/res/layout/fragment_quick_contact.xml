@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="170dip"
         android:scaleType="centerCrop"
-        android:src="@drawable/contact" />
+        android:src="@drawable/jec_admin" />
 
     <TextView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         android:paddingBottom="14dip"
         android:paddingLeft="8dip"
         android:paddingTop="14dip"
-        android:text="Jec One Touch"
+        android:text="JEC One Touch CSE"
         android:textColor="#FFFFFFFF"
         android:textSize="18sp"
         android:id="@+id/header"
@@ -29,7 +29,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="The aims to provide all the college notices, campus happenings and news right into your phone. Forget checking any page or group every few hours so that you don't miss anything. Just sit back and relax, we'll make sure you don't miss anything."
+        android:text="The app aims to provide all the college notices, campus happenings and news right into your phone. Forget checking any page or group every few hours so that you don't miss anything. Just sit back and relax, we'll make sure you don't miss anything."
         android:layout_below="@+id/image"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

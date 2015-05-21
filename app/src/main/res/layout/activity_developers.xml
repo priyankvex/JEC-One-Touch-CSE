@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#4d9de0"
+    >
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textSize="12pt"
+        android:text="Developers"
+        android:id="@+id/textViewDevelopers"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffff01"
+        />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/priyank"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priyank Verma (CSE)"
+        android:textSize="8pt"
+        android:layout_gravity="center"
+        android:layout_margin="6dp"
+        android:id="@+id/textViewPriyank"
+        />
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="priyank.rip@gmail.com\n9685587861"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/textViewPriyankContact"
+        />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ronak"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ronak Khemchandani (CSE)"
+        android:textSize="8pt"
+        android:layout_gravity="center"
+        android:layout_margin="6dp"
+        android:id="@+id/textViewRonak"
+        />
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ronakkhem@gmail.com\n7415515513"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/textViewRonakContact"
+        />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:id="@+id/textViewfunQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="// Remember. It is not a bug. It is a feature."
+        android:layout_gravity="center"
+        android:layout_margin="35dp"
+        android:gravity="center"
+        />
+
+
+
+</LinearLayout>
+
+</ScrollView>

@@ -2,6 +2,7 @@ package com.wordpress.priyankvex.onetouch;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -63,11 +64,8 @@ public class OptionsFragment extends Fragment {
         }
 
         ArrayList<String> options_titles = new ArrayList<>();
-        options_titles.add("About Jec");
-        options_titles.add("Feedback");
         options_titles.add("Create a Buzz");
         options_titles.add("Developers");
-        options_titles.add("Settings");
         options_titles.add("Rate Us");
         options_titles.add("Share App");
 
@@ -78,12 +76,35 @@ public class OptionsFragment extends Fragment {
         optionsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 6){
-                    FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(getActivity())
-                            .setLink("https://developers.facebook.com/android")
-                            .setDescription("This is the para of the post")
-                            .build();
-                    uiHelper.trackPendingDialogCall(shareDialog.present());
+                if (position == 0){
+                    // create a buzz clicked
+                    Bundle b = new Bundle();
+                    b.putString("url", "https://docs.google.com/forms/d/1WysFQ-yrtMWuXcEYoPPpw8hFcBm-mQDNcKATjAlHUWs/viewform");
+                    Intent i = new Intent(getActivity(), WebViewActivity.class);
+                    i.putExtras(b);
+                    startActivity(i);
+                }
+                else if (position == 1){
+                    // developers
+                    Intent i = new Intent(getActivity(), DevelopersActivity.class);
+                    startActivity(i);
+                }
+
+                else if (position == 2){
+                    String url = "https://play.google.com/store/apps/details?id=com.wordpress.priyankvex.onetouch";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+
+                else if (position == 3){
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    String url = "https://play.google.com/store/apps/details?id=com.wordpress.priyankvex.onetouch";
+                    String message = "Hey there! Checkout the official app of CSE Dept. of JEC Jabalpur.\n" + url;
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "JEC Jabalpur CSE Official App");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, message);
+                    startActivity(Intent.createChooser(sharingIntent, "Share via"));
                 }
             }
         });

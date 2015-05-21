@@ -51,6 +51,7 @@
             android:layout_height="wrap_content"
             android:hint="Ex:Dwayne Johnson"
             android:id="@+id/edittext_name"
+            android:inputType="textCapWords"
             />
 
         <TextView
@@ -70,7 +71,9 @@
             android:hint="Ex: dwyane@johnson.com"
             android:id="@+id/edittext_email"
             android:maxLines="1"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            />
 
         <TextView
             android:layout_margin="4dp"
@@ -79,7 +82,8 @@
             android:text="Enrollment Number : "
             android:textSize="15sp"
             android:id="@+id/textview_enroll"
-            android:layout_weight="0.06" />
+            android:layout_weight="0.06"
+            />
 
         <EditText
             android:layout_marginLeft="4dp"
@@ -115,7 +119,7 @@
 
         </FrameLayout>
 
-        <FrameLayout
+        <!--<FrameLayout
             android:layout_marginBottom="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -135,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner_branch"
                 android:layout_gravity="right|center_vertical" />
-        </FrameLayout>
+        </FrameLayout>-->
 
 
         <Button
